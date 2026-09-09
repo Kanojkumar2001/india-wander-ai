@@ -19,6 +19,14 @@
  */
 
 @theme inline {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --color-saffron: var(--saffron);
+  --color-saffron-foreground: var(--saffron-foreground);
+  --color-forest: var(--forest);
+  --color-forest-foreground: var(--forest-foreground);
+  --shadow-soft: 0 1px 2px oklch(0.3 0.05 40 / 0.06), 0 12px 32px oklch(0.3 0.05 40 / 0.08);
+  --shadow-lift: 0 2px 6px oklch(0.3 0.05 40 / 0.08), 0 24px 48px oklch(0.3 0.05 40 / 0.14);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);

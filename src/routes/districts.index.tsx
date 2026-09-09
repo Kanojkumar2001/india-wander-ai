@@ -3,7 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteShell } from "@/components/SiteShell";
 import { districts, places } from "@/data/destinations";
 
-export const Route = createFileRoute("/districts")({
+export const Route = createFileRoute("/districts/")({
   head: () => ({
     meta: [
       { title: "Districts of Andhra Pradesh — KmsAndMiles" },

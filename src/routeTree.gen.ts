@@ -10,33 +10,52 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DistrictsRouteImport } from './routes/districts'
+import { Route as DistrictsDistrictSlugRouteImport } from './routes/districts.$districtSlug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DistrictsRoute = DistrictsRouteImport.update({
+  id: '/districts',
+  path: '/districts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DistrictsDistrictSlugRoute = DistrictsDistrictSlugRouteImport.update({
+  id: '/$districtSlug',
+  path: '/$districtSlug',
+  getParentRoute: () => DistrictsRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/districts': typeof DistrictsRouteWithChildren
+  '/districts/$districtSlug': typeof DistrictsDistrictSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/districts': typeof DistrictsRouteWithChildren
+  '/districts/$districtSlug': typeof DistrictsDistrictSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/districts': typeof DistrictsRouteWithChildren
+  '/districts/$districtSlug': typeof DistrictsDistrictSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/districts' | '/districts/$districtSlug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/districts' | '/districts/$districtSlug'
+  id: '__root__' | '/' | '/districts' | '/districts/$districtSlug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DistrictsRoute: typeof DistrictsRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +67,38 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/districts': {
+      id: '/districts'
+      path: '/districts'
+      fullPath: '/districts'
+      preLoaderRoute: typeof DistrictsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/districts/$districtSlug': {
+      id: '/districts/$districtSlug'
+      path: '/$districtSlug'
+      fullPath: '/districts/$districtSlug'
+      preLoaderRoute: typeof DistrictsDistrictSlugRouteImport
+      parentRoute: typeof DistrictsRoute
+    }
   }
 }
 
+interface DistrictsRouteChildren {
+  DistrictsDistrictSlugRoute: typeof DistrictsDistrictSlugRoute
+}
+
+const DistrictsRouteChildren: DistrictsRouteChildren = {
+  DistrictsDistrictSlugRoute: DistrictsDistrictSlugRoute,
+}
+
+const DistrictsRouteWithChildren = DistrictsRoute._addFileChildren(
+  DistrictsRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DistrictsRoute: DistrictsRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

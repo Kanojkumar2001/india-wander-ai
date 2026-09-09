@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DestinationsIndexRouteImport } from './routes/destinations.index'
+import { Route as DestinationsPlaceSlugRouteImport } from './routes/destinations.$placeSlug'
 import { Route as DistrictsIndexRouteImport } from './routes/districts.index'
 import { Route as DistrictsDistrictSlugRouteImport } from './routes/districts.$districtSlug'
 
@@ -22,6 +23,11 @@ const IndexRoute = IndexRouteImport.update({
 const DestinationsIndexRoute = DestinationsIndexRouteImport.update({
   id: '/destinations/',
   path: '/destinations/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DestinationsPlaceSlugRoute = DestinationsPlaceSlugRouteImport.update({
+  id: '/destinations/$placeSlug',
+  path: '/destinations/$placeSlug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DistrictsIndexRoute = DistrictsIndexRouteImport.update({
@@ -37,12 +43,14 @@ const DistrictsDistrictSlugRoute = DistrictsDistrictSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/destinations/$placeSlug': typeof DestinationsPlaceSlugRoute
   '/districts/$districtSlug': typeof DistrictsDistrictSlugRoute
   '/destinations/': typeof DestinationsIndexRoute
   '/districts/': typeof DistrictsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/destinations/$placeSlug': typeof DestinationsPlaceSlugRoute
   '/districts/$districtSlug': typeof DistrictsDistrictSlugRoute
   '/destinations': typeof DestinationsIndexRoute
   '/districts': typeof DistrictsIndexRoute
@@ -50,18 +58,30 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/destinations/$placeSlug': typeof DestinationsPlaceSlugRoute
   '/districts/$districtSlug': typeof DistrictsDistrictSlugRoute
   '/destinations/': typeof DestinationsIndexRoute
   '/districts/': typeof DistrictsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/districts/$districtSlug' | '/destinations/' | '/districts/'
+  fullPaths:
+    | '/'
+    | '/destinations/$placeSlug'
+    | '/districts/$districtSlug'
+    | '/destinations/'
+    | '/districts/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/districts/$districtSlug' | '/destinations' | '/districts'
+  to:
+    | '/'
+    | '/destinations/$placeSlug'
+    | '/districts/$districtSlug'
+    | '/destinations'
+    | '/districts'
   id:
     | '__root__'
     | '/'
+    | '/destinations/$placeSlug'
     | '/districts/$districtSlug'
     | '/destinations/'
     | '/districts/'
@@ -69,6 +89,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DestinationsPlaceSlugRoute: typeof DestinationsPlaceSlugRoute
   DistrictsDistrictSlugRoute: typeof DistrictsDistrictSlugRoute
   DestinationsIndexRoute: typeof DestinationsIndexRoute
   DistrictsIndexRoute: typeof DistrictsIndexRoute
@@ -90,6 +111,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DestinationsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/destinations/$placeSlug': {
+      id: '/destinations/$placeSlug'
+      path: '/destinations/$placeSlug'
+      fullPath: '/destinations/$placeSlug'
+      preLoaderRoute: typeof DestinationsPlaceSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/districts/': {
       id: '/districts/'
       path: '/districts'
@@ -109,6 +137,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DestinationsPlaceSlugRoute: DestinationsPlaceSlugRoute,
   DistrictsDistrictSlugRoute: DistrictsDistrictSlugRoute,
   DestinationsIndexRoute: DestinationsIndexRoute,
   DistrictsIndexRoute: DistrictsIndexRoute,

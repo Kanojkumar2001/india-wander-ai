@@ -197,24 +197,3 @@ Pattiseema Veerabhadra Swamy Temple (Border) 163 210 Adurru / Vakalapudi Coastal
 History, Origin & Significance History & Origin Araku Valley sits in the Eastern Ghats, long known to tribal and pastoral communities before roads made the viewpoint accessible to travellers. Its present form owes most to the post-1956 Andhra state development period, when patronage, administration and local settlement patterns in Alluri Sitarama Raju (ASR) district gave the site the shape visitors see today. The climb rewards visitors with long views across ridges and valleys, and mist is common in the cooler months. Famous For • Sweeping valley and ridge views • Cool climate relative to the plains • Sunrise and sunset viewpoints • Trekking and short nature walks • Famous hill station known for coffee plantations, chilly climate, and misty valleys. 2 Distance & How to Reach Transit hub Distance from the site Nearest bus stand Paderu bus stand - 6.2 km Nearest railway station Araku Valley Railway Station - 44.7 km Nearest airport Visakhapatnam International Airport - 123.7 km Best season to visit October to February 3 Transport Options by Budget Level From Low budget Medium budget High / luxury Paderu bus stand (6.2 km) APSRTC local / shared auto ~16 min · Rs 15-60 Ola/Uber or private auto ~13 min · Rs 90-196 Chauffeured sedan / hotel pickup ~11 min · Rs 586-1079 Araku Valley Railway Station (44.7 km) Town bus + shared jeep ~103 min · Rs 30-109 App cab / prepaid taxi ~78 min · Rs 775-1144 Innova Crysta with driver ~67 min · Rs 1672-2719 Visakhapatnam International Airport (123.7 km) Airport bus to city + RTC bus ~325 min · Rs 257-416 App cab (outstation rate) ~176 min · Rs 2155-3221 Luxury sedan / SUV transfer ~154 min · Rs 4663-7148 4 Nearby Accommodations (11 stays) Tier Hotel & distance Per night Food & dining Rooms & amenities Budget Paderu Rest House 0.4 km away Rs 800-1,800 Attached South Indian mess; meals plate served Basic AC rooms, TV, 24-hour check-in Budget Paderu Deluxe Lodge 8.1 km away Rs 1,500-2,700 Complimentary tea; dhabas within walking distance Clean twin rooms, fan/AC option, attached bath Budget Alluri Deluxe Lodge 8.3 km away Rs 1,400-2,300 No restaurant; room service snacks and tea only AC rooms, Wi-Fi in lobby, parking Budget Araku Tourist Home 7.3 km away Rs 800-1,800 Basic veg mess on site; tiffin from 7 am AC rooms, Wi-Fi in lobby, parking.
 
 Add these places in website
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/d9a20365-c03b-4342-bd61-2df7a21bb867).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```

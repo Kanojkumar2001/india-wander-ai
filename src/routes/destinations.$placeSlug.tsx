@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 
 import { SiteShell } from "@/components/SiteShell";
 import { getDistrict, getPlace, placeDetails, places } from "@/data/destinations";
+import { categoryAlt, categoryImage } from "@/lib/category-images";
 
 export const Route = createFileRoute("/destinations/$placeSlug")({
   loader: ({ params }) => {
@@ -37,8 +38,16 @@ function PlacePage() {
 
   return (
     <SiteShell>
-      <section className="border-b border-border bg-forest text-forest-foreground">
-        <div className="mx-auto max-w-6xl px-4 py-12">
+      <section className="relative isolate overflow-hidden border-b border-border bg-forest text-forest-foreground">
+        <img
+          src={categoryImage(place.category)}
+          alt={categoryAlt(place.name, place.category)}
+          width={800}
+          height={600}
+          className="absolute inset-0 h-full w-full object-cover opacity-45"
+        />
+        <div className="hero-veil absolute inset-0" />
+        <div className="relative mx-auto max-w-6xl px-4 py-12">
           <Link
             to="/districts/$districtSlug"
             params={{ districtSlug: district.slug }}

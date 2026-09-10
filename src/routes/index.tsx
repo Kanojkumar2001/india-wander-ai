@@ -52,7 +52,7 @@ function Home() {
         />
         <div className="hero-veil absolute inset-0" />
         <div className="relative mx-auto max-w-6xl px-4 py-24 sm:py-32">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-saffron">
+          <p className="hidden">
             Smart India Hackathon 2026 · SIH26202
           </p>
           <h1 className="mt-4 max-w-3xl text-4xl font-semibold text-forest-foreground sm:text-6xl">

@@ -52,10 +52,7 @@ function Home() {
         />
         <div className="hero-veil absolute inset-0" />
         <div className="relative mx-auto max-w-6xl px-4 py-24 sm:py-32">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-saffron">
-            Smart India Hackathon 2026 · SIH26202
-          </p>
-          <h1 className="mt-4 max-w-3xl text-4xl font-semibold text-forest-foreground sm:text-6xl">
+          <h1 className="max-w-3xl text-4xl font-semibold text-forest-foreground sm:text-6xl">
             Every kilometre of Andhra Pradesh, <span className="text-gradient-warm">in one place</span>
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-forest-foreground/85">

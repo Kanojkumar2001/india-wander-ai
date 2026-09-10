@@ -34,7 +34,7 @@ export const categoryOf = (name: string): string => {
   return "Must Visit";
 };
 
-const raw: District[] = [
+const raw: Omit<District, "slug">[] = [
   {
     name: "Alluri Sitarama Raju (ASR)",
     hq: "Paderu",
@@ -309,6 +309,58 @@ const raw: District[] = [
       "Annavaram Ratnagiri Hill Temple",
       "Kakinada Deep Water Port & Harbor",
       "Bhavanarayana Swamy Temple (Sarpavaram)",
+    ],
+  },
+  {
+    name: "Prakasam",
+    hq: "Ongole",
+    places: [
+      "Kothapatnam Beach (Ongole)",
+      "Markapur Chennakesava Swamy Temple",
+      "Singarayakonda Lakshmi Narasimha Temple",
+      "Cumbum Lake (Cumbum Tank)",
+      "Bhairavakonda Cave Temples",
+      "Tripurantakam Tripurantakeswara Temple",
+      "Motupalli Historic Port",
+      "Ongole Bull Breeding Farms",
+      "Pakala Beach",
+      "Ramayapatnam Beach & Lighthouse",
+      "Chirala / Vodarevu Coastal Drive",
+      "Singarakonda Anjaneya Swamy Temple",
+      "Kanigiri Hill Fort Ruins",
+      "Giddalur Nallamala Forest Entry",
+      "Podili Ramalingeswara Temple",
+      "Tangutur Valluramma Temple",
+      "Santhanuthalapadu Eco Park",
+      "Gundlakamma River Reservoir",
+      "Chimakurthi Black Granite Quarries",
+      "Prakasam Town Heritage Clock Tower",
+    ],
+  },
+  {
+    name: "Visakhapatnam",
+    hq: "Visakhapatnam",
+    places: [
+      "INS Kursura Submarine Museum",
+      "TU-142M Aircraft Museum",
+      "RK Beach (Ramakrishna Beach)",
+      "Rushikonda Beach",
+      "Kailasagiri Hill Park",
+      "Simhachalam Varaha Lakshmi Narasimha Temple",
+      "Yarada Beach",
+      "Dolphin's Nose & Lighthouse",
+      "Tenneti Park & Sea View Point",
+      "Sea Harrier Museum",
+      "Ross Hill, Dargah Konda & Sri Venkateswara Konda",
+      "Visakha Museum",
+      "VMRDA City Central Park",
+      "Indira Gandhi Zoological Park",
+      "Kambalakonda Wildlife Sanctuary",
+      "Sagar Nagar Beach",
+      "Bheemunipatnam (Bheemili) Beach & Dutch Ruins",
+      "Red Sand Hills (Erra Matti Dibbalu)",
+      "Gosthani River Confluence (Bheemili)",
+      "Lawson's Bay Beach & Park",
     ],
   },
 ];

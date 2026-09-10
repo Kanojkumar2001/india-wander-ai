@@ -34,7 +34,7 @@ export const categoryOf = (name: string): string => {
   return "Must Visit";
 };
 
-const raw: District[] = [
+const raw: Omit<District, "slug">[] = [
   {
     name: "Alluri Sitarama Raju (ASR)",
     hq: "Paderu",

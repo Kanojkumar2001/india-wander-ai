@@ -8,16 +8,16 @@ import { categories, districts, places } from "@/data/destinations";
 export const Route = createFileRoute("/destinations/")({
   head: () => ({
     meta: [
-      { title: "All tourist places in Andhra Pradesh — KmsAndMiles" },
+      { title: "All tourist places in Andhra Pradesh — My Bags Journey" },
       {
         name: "description",
         content:
           "Search 200+ tourist places across Andhra Pradesh by name, district or type — heritage temples, waterfalls, beaches, forts, wildlife and hidden gems.",
       },
-      { property: "og:title", content: "All tourist places in Andhra Pradesh — KmsAndMiles" },
+      { property: "og:title", content: "All tourist places in Andhra Pradesh — My Bags Journey" },
       {
         property: "og:description",
-        content: "Search and filter every destination in the KmsAndMiles travel database.",
+        content: "Search and filter every destination in the My Bags Journey travel database.",
       },
     ],
   }),

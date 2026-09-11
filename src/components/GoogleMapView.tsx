@@ -83,7 +83,7 @@ export function GoogleMapView({ markers, zoom = 12, className }: Props) {
         if (cancelled || !containerRef.current) return;
         const maps = window.google.maps;
         const map = new maps.Map(containerRef.current, {
-          center: { lat: markers[0].lat, lng: markers[0].lng },
+          center: { lat: markers[0]!.lat, lng: markers[0]!.lng },
           zoom,
           mapTypeControl: false,
           streetViewControl: false,

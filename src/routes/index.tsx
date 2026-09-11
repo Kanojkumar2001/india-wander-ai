@@ -8,13 +8,13 @@ import { categories, districts, getPlace, places } from "@/data/destinations";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "KmsAndMiles — AI-powered smart tourism for Andhra Pradesh" },
+      { title: "My Bags Journey — AI-powered smart tourism for Andhra Pradesh" },
       {
         name: "description",
         content:
           "One place to plan an Andhra Pradesh trip: 200+ district-wise destinations with history, distances, transport by budget, stays and hidden gems.",
       },
-      { property: "og:title", content: "KmsAndMiles — AI-powered smart tourism" },
+      { property: "og:title", content: "My Bags Journey — AI-powered smart tourism" },
       {
         property: "og:description",
         content:
@@ -56,7 +56,7 @@ function Home() {
             Every kilometre of Andhra Pradesh, <span className="text-gradient-warm">in one place</span>
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-forest-foreground/85">
-            KmsAndMiles brings destination history, distances, transport costs by budget, stays and
+            My Bags Journey brings destination history, distances, transport costs by budget, stays and
             hidden gems together — so planning a trip stops being a scavenger hunt.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -65,6 +65,12 @@ function Home() {
               className="rounded-full bg-saffron px-6 py-3 text-sm font-semibold text-saffron-foreground shadow-lift transition-transform hover:-translate-y-0.5"
             >
               Explore {places.length} places
+            </Link>
+            <Link
+              to="/trip-planner"
+              className="rounded-full border border-forest-foreground/40 px-6 py-3 text-sm font-semibold text-forest-foreground transition-colors hover:bg-forest-foreground/10"
+            >
+              Plan my trip
             </Link>
             <Link
               to="/districts"

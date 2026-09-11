@@ -6,13 +6,13 @@ import { districts, places } from "@/data/destinations";
 export const Route = createFileRoute("/districts/")({
   head: () => ({
     meta: [
-      { title: "Districts of Andhra Pradesh — KmsAndMiles" },
+      { title: "Districts of Andhra Pradesh — My Bags Journey" },
       {
         name: "description",
         content:
           "Browse tourist places district by district across Andhra Pradesh, with headquarters and place counts for every district.",
       },
-      { property: "og:title", content: "Districts of Andhra Pradesh — KmsAndMiles" },
+      { property: "og:title", content: "Districts of Andhra Pradesh — My Bags Journey" },
       {
         property: "og:description",
         content: "Explore every district's temples, waterfalls, beaches, forts and hidden gems.",

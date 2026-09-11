@@ -13,10 +13,10 @@ export const Route = createFileRoute("/destinations/$placeSlug")({
   },
   head: ({ loaderData }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Place not found — KmsAndMiles" }, { name: "robots", content: "noindex" }] };
+      return { meta: [{ title: "Place not found — My Bags Journey" }, { name: "robots", content: "noindex" }] };
     }
     const { place, district } = loaderData;
-    const title = `${place.name}, ${district.name} — travel guide | KmsAndMiles`;
+    const title = `${place.name}, ${district.name} — travel guide | My Bags Journey`;
     const description = `${place.name} in ${district.name} district, Andhra Pradesh: history, how to reach, transport by budget, nearby stays and the best season to visit.`;
     return {
       meta: [

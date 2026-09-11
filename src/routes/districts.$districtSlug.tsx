@@ -12,10 +12,10 @@ export const Route = createFileRoute("/districts/$districtSlug")({
   },
   head: ({ loaderData }) => {
     if (!loaderData) {
-      return { meta: [{ title: "District not found — KmsAndMiles" }, { name: "robots", content: "noindex" }] };
+      return { meta: [{ title: "District not found — My Bags Journey" }, { name: "robots", content: "noindex" }] };
     }
     const { district } = loaderData;
-    const title = `${district.name} district travel guide — KmsAndMiles`;
+    const title = `${district.name} district travel guide — My Bags Journey`;
     const description = `${district.places.length} places to visit in ${district.name} district (HQ ${district.hq}), Andhra Pradesh, with distances, transport and stay guidance.`;
     return {
       meta: [

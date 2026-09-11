@@ -67,6 +67,12 @@ function Home() {
               Explore {places.length} places
             </Link>
             <Link
+              to="/trip-planner"
+              className="rounded-full border border-forest-foreground/40 px-6 py-3 text-sm font-semibold text-forest-foreground transition-colors hover:bg-forest-foreground/10"
+            >
+              Plan my trip
+            </Link>
+            <Link
               to="/districts"
               className="rounded-full border border-forest-foreground/40 px-6 py-3 text-sm font-semibold text-forest-foreground transition-colors hover:bg-forest-foreground/10"
             >

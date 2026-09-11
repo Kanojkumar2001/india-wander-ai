@@ -189,3 +189,15 @@
   background-clip: text;
   color: transparent;
 }
+
+@media print {
+  .print-hide {
+    display: none !important;
+  }
+  .print-area {
+    margin: 0 !important;
+  }
+  body {
+    background: #fff;
+  }
+}
